@@ -7,7 +7,7 @@ resolution-markers = [
 ]
 
 [[package]]
-name = "analyze-image-mcp"
+name = "analyze-image-mcp-simple"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
