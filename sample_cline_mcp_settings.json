@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "analyze_image_mcp_simple": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "--directory",
+        "<PATH_TO_VENV>",
+        "run",
+        "-m",
+        "analyze_image_mcp_simple.mcp_modules.mcp_app_server"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "sk-****************",
+        "OPENAI_COMPLETION_MODEL": "gpt-4.1"
+      }
+    }
+  }
+}
