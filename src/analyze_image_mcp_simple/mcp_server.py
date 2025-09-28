@@ -9,7 +9,7 @@ from analyze_image_mcp_simple.image_chat_util import ImageChatUtil, ImageAnalysi
 mcp = FastMCP("analyze_image_mcp_simple") #type :ignore
 
         
-@mcp.tool
+@mcp.tool()
 async def analyze_image_mcp(
     image_path: Annotated[str, Field(description="解析する画像ファイルの絶対パス。必ず絶対パスを指定してください。例: /path/to/image.jpg")],
     prompt: Annotated[str, Field(description="画像解析用のプロンプト")]
