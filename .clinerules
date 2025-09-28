@@ -14,7 +14,6 @@ flowchart TD
     PB --> OP[operationalPatterns.md]
     PB --> TC[techContext.md]
 
-    PC --> EX[excludedPaths.md]
     PC --> AC[activeContext.md]
     OP --> AC
     TC --> AC
@@ -33,7 +32,7 @@ flowchart TD
 | `techContext.md`       | モジュール構成、依存関係、画像比較の技術的背景・手法を整理 |
 | `operationalPatterns.md`| 設計書とエビデンス画像の比較手順、チェック項目、運用ルール、命名規則などを記述 |
 | `activeContext.md`     | 現在チェック中の設計書・エビデンス画像、優先対象、未完了項目を管理 |
-| `progress.md`          | チェック対象一覧、比較結果、進捗、完了／未完了記録、タイムスタンプ、作業者名を記録 |
+| `progress.md`          | チェック対象一覧、比較結果、進捗、完了／未完了記録、タイムスタンプ、作業者名を記録。初期化時にテーブル形式でヘッダを作成 |
 
 ---
 
