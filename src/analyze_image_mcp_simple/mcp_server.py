@@ -20,7 +20,7 @@ async def analyze_image_mcp(
     response = await ImageChatUtil.generate_image_analysis_response_async(image_path, prompt)
     return response
 
-@mcp.tool
+@mcp.tool()
 async def analyze_two_images_mcp(
     image_path1: Annotated[str, Field(description="1枚目の解析対象画像ファイルの絶対パス。。必ず絶対パスを指定してください。例: /path/to/image1.jpg")],
     image_path2: Annotated[str, Field(description="2枚目の解析対象画像ファイルの絶対パス。必ず絶対パスを指定してください。例: /path/to/image2.jpg")],
