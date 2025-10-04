@@ -13,24 +13,22 @@
 * OpenAIのAPIキーを取得していること
 
 ## 準備
-1. このGitリポジトリをclineします。
+1. このGitリポジトリをcloneします。
+
     ```bash
     git clone https://github.com/knd3dayo/analyze_image_mcp_simple.git
     ```
 
-1. Python仮想環境を作成します.
-    ```batch
-    python -m venv venv
-    ```
+1. git cloneしたディレクトリに移動してuv syncを実行。
 
-1. venv環境を有効にして、画像比較用MCPサーバーをインストールします
     ```batch
-    venv\Scripts\Activate
-    pip install .
+    uv sync
     ```
+    .venvディレクトリが作成される。
 
 1. `sample_cline_mcp_settings.json`の内容を編集して、`cline_mcp_settings.json`に追加します.
-    PATH_TO_VENVはvenvへのパス、OPENAI_API_KEYはOpenAIのAPIキーを設定。
+
+    PATH_TO_PROJECT_DIRはgit cloneしたディレクトリへのパス、OPENAI_API_KEYはOpenAIのAPIキーを設定。
 
     ```json
     "analyze_image_mcp_simple": {
@@ -40,7 +38,7 @@
       "command": "uv",
       "args": [
         "--directory",
-        "<PATH_TO_VENV>", 
+        "<PATH_TO_PROJECT_DIR>", 
         "run",
         "-m",
         "analyze_image_mcp_simple.mcp_modules.mcp_app_server"
